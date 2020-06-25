@@ -29,6 +29,13 @@ skinparam database<<container>> {
     BorderColor #3C7FC0
 }
 
+skinparam queue<<container>> {
+    StereotypeFontColor $ELEMENT_FONT_COLOR
+    FontColor $ELEMENT_FONT_COLOR
+    BackgroundColor $CONTAINER_BG_COLOR
+    BorderColor #3C7FC0
+}
+
 ' Layout
 ' ##################################
 
