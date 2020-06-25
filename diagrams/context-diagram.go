@@ -3,8 +3,9 @@ package diagrams
 import (
 	"bytes"
 	"fmt"
-	"github.com/SteffiPeTaffy/c4documentation/elements"
 	"strings"
+
+	"github.com/svishwanath-tw/c4documentation/elements"
 )
 
 type C4ContextDiagram struct {
@@ -54,7 +55,7 @@ func findSystemRelations(elems []*elements.C4Element) []*elements.C4Relation {
 	relationsMap := make(map[elements.C4Alias][]*elements.C4Relation)
 	for _, element := range elems {
 		for _, relation := range element.OutgoingRelations {
-			systemRelation := &elements.C4Relation {
+			systemRelation := &elements.C4Relation{
 				From:       findRoot(relation.From),
 				To:         findRoot(relation.To),
 				Label:      relation.Label,
@@ -65,7 +66,7 @@ func findSystemRelations(elems []*elements.C4Element) []*elements.C4Relation {
 	}
 
 	allRelations := make([]*elements.C4Relation, 0, len(relationsMap))
-	for  _, value := range relationsMap {
+	for _, value := range relationsMap {
 		allRelations = append(allRelations, value...)
 	}
 
@@ -101,7 +102,7 @@ func unique(list []string) []string {
 	keys := make(map[string]bool)
 	var tmp []string
 	for _, entry := range list {
-		if _, value := keys[entry]; !value  && entry != ""{
+		if _, value := keys[entry]; !value && entry != "" {
 			keys[entry] = true
 			tmp = append(tmp, entry)
 		}

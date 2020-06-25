@@ -3,7 +3,8 @@ package diagrams
 import (
 	"bytes"
 	"fmt"
-	"github.com/SteffiPeTaffy/c4documentation/elements"
+
+	"github.com/svishwanath-tw/c4documentation/elements"
 )
 
 type C4ContainerDiagram struct {
@@ -22,7 +23,7 @@ func (c *C4ContainerDiagram) ToC4PlantUMLString() string {
 	var b bytes.Buffer
 
 	b.WriteString(fmt.Sprintf("@startuml %s\n", c.name))
-	b.WriteString("!include https://raw.githubusercontent.com/SteffiPeTaffy/c4documentation/master/templates/container.puml\n")
+	b.WriteString("!include https://raw.githubusercontent.com/svishwanath-tw/c4documentation/master/templates/container.puml\n")
 	b.WriteString("LAYOUT_TOP_DOWN()\n")
 	b.WriteString("LAYOUT_WITH_LEGEND()\n")
 

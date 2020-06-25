@@ -1,6 +1,6 @@
 package diagrams
 
-import "github.com/SteffiPeTaffy/c4documentation/elements"
+import "github.com/svishwanath-tw/c4documentation/elements"
 
 var someWrappingBoundary = elements.
 	NewSystemBoundary("Wrapping Boundary").

@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/SteffiPeTaffy/c4documentation/elements"
-	"github.com/SteffiPeTaffy/c4documentation/diagrams"
 	"fmt"
+
+	"github.com/svishwanath-tw/c4documentation/diagrams"
+	"github.com/svishwanath-tw/c4documentation/elements"
 )
 
 func main() {
@@ -40,7 +41,7 @@ func main() {
 		Elements: []*elements.C4Element{someContainer, someContainerDatabase, someOtherContainer},
 	}
 
-
 	containerDiagram := diagrams.NewContainerDiagram("My Container Diagram", myModel)
 
-	fmt.Println(containerDiagram.ToC4PlantUMLString())}
+	fmt.Println(containerDiagram.ToC4PlantUMLString())
+}
